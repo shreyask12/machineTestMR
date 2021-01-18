@@ -1,6 +1,21 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-class PaymentPage extends StatelessWidget {
+class PaymentPage extends StatefulWidget {
+  @override
+  _PaymentPageState createState() => _PaymentPageState();
+}
+
+class _PaymentPageState extends State<PaymentPage> {
+  final List<String> temp = [
+    'Confirmed',
+    'Order Recieved',
+    'Preparing',
+    'Delivery',
+    'Rate Us'
+  ];
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -17,6 +32,7 @@ class PaymentPage extends StatelessWidget {
             width: width,
             height: height,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Order No : 123832832830'),
                 SizedBox(
@@ -36,30 +52,41 @@ class PaymentPage extends StatelessWidget {
                                   height: 60,
                                   width: 60,
                                   decoration: BoxDecoration(
-                                    color: Colors.grey,
+                                    color:
+                                        index == 0 ? Colors.green : Colors.grey,
                                     shape: BoxShape.circle,
                                   ),
                                 ),
                                 SizedBox(
                                   width: 50,
                                 ),
-                                Text('Confirmed'),
+                                Text(
+                                  temp[index],
+                                  style: index == 0
+                                      ? TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          color: Colors.black)
+                                      : TextStyle(color: Colors.grey),
+                                ),
                               ],
                             ),
-                            index != 4
+                            index != temp.length - 1
                                 ? Padding(
                                     padding: const EdgeInsets.only(left: 30),
                                     child: Container(
                                       height: 50,
                                       width: 2,
-                                      color: Colors.grey,
+                                      color: index == 0
+                                          ? Colors.green
+                                          : Colors.grey,
                                     ),
                                   )
                                 : Container(),
                           ],
                         );
                       },
-                      itemCount: 5),
+                      itemCount: temp.length),
                 )
               ],
             ),

@@ -251,11 +251,11 @@ class _CounterState extends State<Counter> {
                 setState(() {});
               },
               child: Container(
-                height: 50,
-                width: 50,
+                height: 40,
+                width: 40,
                 color: Colors.red,
                 child: IconButton(
-                  icon: Icon(Icons.minimize),
+                  icon: Icon(Icons.remove),
                   onPressed: () {
                     if (counter > 1) {
                       counter--;
@@ -268,8 +268,8 @@ class _CounterState extends State<Counter> {
           ),
           Expanded(
             child: Container(
-              height: 50,
-              width: 50,
+              height: 40,
+              width: 40,
               color: Colors.white,
               child: Center(child: Text(counter.toString())),
             ),
@@ -284,8 +284,8 @@ class _CounterState extends State<Counter> {
                 setState(() {});
               },
               child: Container(
-                height: 50,
-                width: 50,
+                height: 40,
+                width: 40,
                 color: Colors.green,
                 child: IconButton(
                   icon: Icon(Icons.add),
