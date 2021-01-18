@@ -29,7 +29,7 @@ class _DashBoardState extends State<DashBoard> {
                   children: [
                     SizedBox(height: 30),
                     Container(
-                      padding: EdgeInsets.all(10.0),
+                      padding: EdgeInsets.only(left: 20.0),
                       child: Text(
                         'Restaurant Name',
                         style: TextStyle(
@@ -37,7 +37,7 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(20.0),
                       height: 300,
                       child: ListView(
                         children: [
@@ -144,7 +144,7 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(20.0),
                       height: 400,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,8 +191,11 @@ class _DashBoardState extends State<DashBoard> {
                           Text('30 mins',
                               style: TextStyle(
                                   fontWeight: FontWeight.w800, fontSize: 30)),
+                          SizedBox(height: 20),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 30),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 30,
+                            ),
                             child: GestureDetector(
                               onTap: () {
                                 Navigator.push(context, MaterialPageRoute(
