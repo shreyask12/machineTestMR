@@ -17,201 +17,208 @@ class _DashBoardState extends State<DashBoard> {
         centerTitle: true,
         leading: Icon(Icons.arrow_back_ios),
       ),
-      body: SingleChildScrollView(
-        child: Expanded(
-          child: Container(
-            width: width,
-            // height: height,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 30),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'Restaurant Name',
-                    style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  height: 300,
-                  child: ListView(
-                    children: [
-                      Container(
-                        width: width,
-                        height: 100,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 100,
-                              height: 100,
-                              color: Colors.grey,
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Dish Name',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                                Text(
-                                  'Ice Cream',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                Text('Rs. 35',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 50,
-                            ),
-                            Expanded(child: Counter()),
-                          ],
-                        ),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Container(
+                width: width,
+                // height: height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 30),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Restaurant Name',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 20),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        width: width,
-                        height: 100,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 100,
-                              height: 100,
-                              color: Colors.grey,
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Dish Name',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                                Text(
-                                  'Ice Cream',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                Text('Rs. 35',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 50,
-                            ),
-                            Expanded(child: Counter()),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment: MainAxisAlignment.end,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      height: 300,
+                      child: ListView(
                         children: [
-                          Text('Grand Total .'),
+                          Container(
+                            width: width,
+                            height: 100,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 100,
+                                  height: 100,
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Dish Name',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text(
+                                      'Ice Cream',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    Text('Rs. 35',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 50,
+                                ),
+                                Expanded(child: Counter()),
+                              ],
+                            ),
+                          ),
                           SizedBox(
-                            width: 5,
+                            height: 10,
                           ),
-                          Text(
-                            'Rs. 65',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800, fontSize: 20),
+                          Container(
+                            width: width,
+                            height: 100,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 100,
+                                  height: 100,
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Dish Name',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    Text(
+                                      'Ice Cream',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    Text('Rs. 35',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 50,
+                                ),
+                                Expanded(child: Counter()),
+                              ],
+                            ),
                           ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text('Grand Total .'),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'Rs. 65',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800, fontSize: 20),
+                              ),
+                            ],
+                          )
                         ],
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  height: 400,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Row(
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      height: 400,
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text('Delivery', style: TextStyle(fontSize: 25)),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Delivery', style: TextStyle(fontSize: 25)),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text('Pick Up',
+                                  style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    fontSize: 25,
+                                  )),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 70,
+                          ),
+                          Text('Marina Mall Brunch',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w800, fontSize: 20)),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Text('Mon-Thu : 06:00 - 22:00',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w800, fontSize: 15)),
+                          Text('Fri-Sat : 06:00 - 22:00',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w800, fontSize: 15)),
                           SizedBox(
                             width: 30,
                           ),
-                          Text('Pick Up',
+                          Text('+91 967493999'),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text('Pick Up Your Order in '),
+                          Text('30 mins',
                               style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 25,
-                              )),
+                                  fontWeight: FontWeight.w800, fontSize: 30)),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 30),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(
+                                    builder: (BuildContext context) {
+                                  return PaymentPage();
+                                }));
+                              },
+                              child: Container(
+                                width: width - 70,
+                                height: 50,
+                                color: Colors.red,
+                                child: Center(
+                                  child: Text('Make Order'),
+                                ),
+                              ),
+                            ),
+                          )
                         ],
                       ),
-                      SizedBox(
-                        width: 70,
-                      ),
-                      Text('Marina Mall Brunch',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w800, fontSize: 20)),
-                      SizedBox(
-                        width: 50,
-                      ),
-                      Text('Mon-Thu : 06:00 - 22:00',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w800, fontSize: 15)),
-                      Text('Fri-Sat : 06:00 - 22:00',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w800, fontSize: 15)),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Text('+91 967493999'),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Text('Pick Up Your Order in '),
-                      Text('30 mins',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w800, fontSize: 30)),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(
-                                builder: (BuildContext context) {
-                              return PaymentPage();
-                            }));
-                          },
-                          child: Container(
-                            width: width - 70,
-                            height: 50,
-                            color: Colors.red,
-                            child: Center(
-                              child: Text('Make Order'),
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
